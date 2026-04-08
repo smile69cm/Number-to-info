@@ -22,10 +22,7 @@ export default async function handler(req, res) {
         
         // 5. CLEAN UP: Delete the promotional fields so no one sees them
         delete data.channel_name;
-        delete data.link;
-        delete data.app_developer;
-        delete data.developer; // Added just in case
-        delete data.telegram;  // Added just in case
+        delete data.channel_link;
         
         // 6. Send the clean data back to your frontend
         return res.status(200).json(data);
